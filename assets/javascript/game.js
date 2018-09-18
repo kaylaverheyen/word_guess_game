@@ -22,7 +22,8 @@ var phrases = [
 //start count loop for number of guesses --??
 var wins = 0;
 var numberOfGuessesRemaining = 15;
-var lettersGuessed = "";
+// var letterGuessed = "";
+var letterGuessedArr = [];
 
 //variables that reference html
 var directionText = document.getElementById("Press any letter key to guess!");
@@ -44,7 +45,8 @@ asteriskSpan.innerText = asterisksWord
 
 //take user input and check it against
 document.onkeyup = function(event) {
-    var lettersGuessed = event.key;
+    var letterGuessed = event.key;
+    letterGuessedArr.push(letterGuessed);
 }
  
     // if user inputs a letter it checks to see if it is correct and then it appears. 
