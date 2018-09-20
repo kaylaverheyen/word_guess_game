@@ -1,3 +1,6 @@
+
+
+
 //make an array of random words
 var phrases = [
     "Ramen",
@@ -11,10 +14,11 @@ var phrases = [
     "Steak",
 ];
 // chose a random word 
-    var chosenWord = phrases[1];
+   var chosenWord = phrases[Math.floor(Math.random() * phrases.length)];
    // math.random => 1.32342342
    // math.floor(..) => 1
-    Math.random() * max 
+    //Math.random() * max 
+
 // display one asterik per letter on the screen
 // for a specific word
 
@@ -26,8 +30,8 @@ var numberOfGuessesRemaining = 15;
 var letterGuessedArr = [];
 
 //variables that reference html
-var directionText = document.getElementById("Press any letter key to guess!");
-var lettersGuessed = document.getElementById("Letters-Guessed");
+var directionText = document.getElementById("Press any letter key to guess the word!");
+var lettersGuessed = document.getElementById("letters-guessed");
 var winsText = document.getElementById("wins-text");
 var guessesRemaining = document.getElementById("guesses-remaining");
  
@@ -39,17 +43,26 @@ var asterisksWord = "";
 for (var i = 0; i < chosenWord.length; i++) {
     asterisksWord += "*";
 asteriskSpan.innerText = asterisksWord
+console.log(asterisksWord)
+
 }
 // ----var found = chosenWord.find() ????
+//make the wins an object and guesses left an object-- use this.wins +
 
-
+  // if user inputs a letter it checks to see if it is correct and then it appears.
 //take user input and check it against
 document.onkeyup = function(event) {
     var letterGuessed = event.key;
     letterGuessedArr.push(letterGuessed);
 }
- 
-    // if user inputs a letter it checks to see if it is correct and then it appears. 
+ if (letterGuessed = chosenWord[i]);{
+     print(letterGuessed);
+ }
+// else 
+  // print(asterisksWord)
+
+    
+   
         // -if false the letter appears and an asterisk appears user index of for letters contained
         // 
 // the specific word
